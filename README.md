@@ -1,4 +1,4 @@
-# destinationUnNode
+# DestinationUnNode
 
 ## Overview
 This API is designed to inspire new holiday desintations. Simply load the API and be inspired. 
