@@ -72,15 +72,20 @@ const countries = {
   }
 };
 
-const allCountries = name => {
-  return countries[name].author;
+const allCountries = function(countries) {
+  return countries;
 };
 
-const getDatePublished = name => {
-  return books[name].published;
+const specificCountry = function(name) {
+  return countries[name];
+};
+
+const getCity = function(countries) {
+  return countries[name].city;
 };
 
 module.exports = {
   allCountries,
-  getDatePublished
+  specificCountry,
+  getCity
 };
