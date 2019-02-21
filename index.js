@@ -10,53 +10,65 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/countries", (req, res) => {
-  // let name = req.query.citys;
-  // if (!name) {
-  //     let allCountries = TheNames.allCountries
-  // }
-  res.json({ message: "hello, this will include countries" });
+app.get("/", (req, res) => {
+  let destinations = countries.allCountries(countries);
+  res.json({ destinations });
 });
 
-app.get("/cities", (req, res) => {
-  // let name = req.query.citys;
-  // if (!name) {
-  //     let allCountries = TheNames.allCountries
-  // }
-  res.json({ message: "hello, this will include cities" });
+app.get("/:country", (req, res) => {
+  console.log("req.params", req.params);
+  let newCountry = req.params.country;
+  let specificCountry = countries.specificCountry(newCountry);
+  res.json({ specificCountry });
 });
 
-app.get("/language", (req, res) => {
-  // let name = req.query.citys;
-  // if (!name) {
-  //     let allCountries = TheNames.allCountries
-  // }
-  res.json({ message: "hello, this will include language" });
-});
+// app.get("/countries", (req, res) => {
+//   // let name = req.query.citys;
+//   // if (!name) {
+//   //     let allCountries = TheNames.allCountries
+//   // }
+//   res.json({ message: "hello, this will include countries" });
+// });
 
-app.get("/cuisine", (req, res) => {
-  // let name = req.query.citys;
-  // if (!name) {
-  //     let allCountries = TheNames.allCountries
-  // }
-  res.json({ message: "hello, this will include cuisine" });
-});
+// app.get("/cities", (req, res) => {
+//   // let name = req.query.citys;
+//   // if (!name) {
+//   //     let allCountries = TheNames.allCountries
+//   // }
+//   res.json({ message: "hello, this will include cities" });
+// });
 
-app.get("/tips", (req, res) => {
-  // let name = req.query.citys;
-  // if (!name) {
-  //     let allCountries = TheNames.allCountries
-  // }
-  res.json({ message: "hello, this will include travelers tips" });
-});
+// app.get("/language", (req, res) => {
+//   // let name = req.query.citys;
+//   // if (!name) {
+//   //     let allCountries = TheNames.allCountries
+//   // }
+//   res.json({ message: "hello, this will include language" });
+// });
 
-app.get("/activites", (req, res) => {
-  // let name = req.query.citys;
-  // if (!name) {
-  //     let allCountries = TheNames.allCountries
-  // }
-  res.json({ message: "hello, this will include travelers tips" });
-});
+// app.get("/cuisine", (req, res) => {
+//   // let name = req.query.citys;
+//   // if (!name) {
+//   //     let allCountries = TheNames.allCountries
+//   // }
+//   res.json({ message: "hello, this will include cuisine" });
+// });
+
+// app.get("/tips", (req, res) => {
+//   // let name = req.query.citys;
+//   // if (!name) {
+//   //     let allCountries = TheNames.allCountries
+//   // }
+//   res.json({ message: "hello, this will include travelers tips" });
+// });
+
+// app.get("/activites", (req, res) => {
+//   // let name = req.query.citys;
+//   // if (!name) {
+//   //     let allCountries = TheNames.allCountries
+//   // }
+//   res.json({ message: "hello, this will include travelers tips" });
+// });
 
 app.listen(PORT, () => {
   console.log(`I'm listening on port ${PORT}`);
