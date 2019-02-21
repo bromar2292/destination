@@ -1,7 +1,7 @@
 const express = require("express");
 const Country = require("./countries.js");
 
-const PORT = 3500;
+const PORT = 3000;
 
 const app = express();
 
