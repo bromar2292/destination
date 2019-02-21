@@ -80,7 +80,7 @@ const specificCountry = function(name) {
   return countries[name];
 };
 
-const getCity = function(countries) {
+const getCity = function(name) {
   return countries[name].city;
 };
 
