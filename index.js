@@ -1,5 +1,5 @@
 const express = require("express");
-const Country = require("./countries.js");
+const countries = require("./countries.js");
 
 const PORT = 3000;
 
@@ -11,7 +11,7 @@ app.use((req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-  let destinations = countries.allCountries(countries);
+  let destinations = countries.allCountries();
   res.json({ destinations });
 });
 
@@ -20,6 +20,13 @@ app.get("/:country", (req, res) => {
   let newCountry = req.params.country;
   let specificCountry = countries.specificCountry(newCountry);
   res.json({ specificCountry });
+});
+
+app.get("/cities/:city", (req, res) => {
+  //   console.log("req.params", req.params);
+  let newCity = req.params.city;
+  let specificCity = countries.getCity(newCity);
+  res.json({ specificCity });
 });
 
 // app.get("/countries", (req, res) => {

@@ -72,7 +72,7 @@ const countries = {
   }
 };
 
-const allCountries = function(countries) {
+const allCountries = function() {
   return countries;
 };
 
@@ -80,8 +80,13 @@ const specificCountry = function(name) {
   return countries[name];
 };
 
-const getCity = function(name) {
-  return countries[name].city;
+const getCity = function(city) {
+  for (let countryName in countries) {
+    console.log(countries[countryName].city);
+    if (countries[countryName].city.toLowerCase() === city) {
+      return countries[countryName];
+    }
+  }
 };
 
 module.exports = {
