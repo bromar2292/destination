@@ -5,7 +5,8 @@ const countries = {
     cuisine: "Good steaks and sangria",
     image: "https://www.lastminute.com/flights/lastminute/img/faro.jpg",
     language: "Portuguese",
-    tip: "Visit Faz Gostos, a Michelin Star restaurant"
+    tip: "Visit Faz Gostos, a Michelin Star restaurant",
+    temp: "hot"
   },
 
   malta: {
@@ -15,7 +16,8 @@ const countries = {
     image:
       "https://i1.wp.com/historyfangirl.com/wp-content/uploads/2015/10/dsc_0679.jpg?resize=750%2C545&ssl=1",
     language: "English",
-    tip: "Go to Comino island and visit the Blue Lagoon"
+    tip: "Go to Comino island and visit the Blue Lagoon",
+    temp: "hot"
   },
 
   cyprus: {
@@ -69,6 +71,34 @@ const countries = {
     language: "Japanese",
     tip:
       "Spring to catch the cherry blossoms or autumn to catch the leaves falling"
+  },
+  england: {
+    city: "Birmingham",
+    todo: "nothing apart from code",
+    cuisine: "biscuits",
+    image:
+      "https://www.siddalljones.com/uploads/images/products/CF%20Pic%20(credit%20Suzanne%20Lea%20Smith)%203_20170428101846.jpg",
+    language: "brummy",
+    tip: "never loose an energiser"
+  },
+  Hungary: {
+    city: "Budapest",
+    todo: "great buildings and baths",
+    cuisine: "try the goose leg!",
+    image:
+      "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/01/21/12/budapest.jpg?w968h681",
+    language: "hungarian",
+    tip: "you need more than a weekend to explore this place"
+  },
+  Brazil: {
+    city: "rio",
+    todo: "see Manu",
+    cuisine: "beans with rice",
+    image:
+      "https://www.pandotrip.com/wp-content/uploads/2016/02/Rio3-1-980x699.jpg",
+    language: "Portuguese",
+    tip:
+      "make sure if you dont want to go out with your friends you have plenty of excuses, because they wont let you -Manu 2019"
   }
 };
 
